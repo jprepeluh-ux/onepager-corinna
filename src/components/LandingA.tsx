@@ -314,7 +314,7 @@ function Hero() {
           transition={{ duration: 0.9, delay: 0.4 }}
           className="font-playfair font-bold text-5xl md:text-7xl text-white leading-[1.1] mb-6 text-balance"
         >
-          Unser Weg zur<br />
+          Dein Weg zur<br />
           <em className="italic not-italic text-highlight-hero-a">inneren Stärke.</em>
         </motion.h1>
 
