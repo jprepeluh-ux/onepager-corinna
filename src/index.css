@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius-button-a: 4px;
+    --radius-card-a: 8px;
+    --radius-accordion-a: 4px;
+
+    /* Text */
+    --color-text-primary:   #203621;
+    --color-text-secondary: #2E4E2F;
+    --color-text-muted:     #6B9B6B;
+
+    /* Backgrounds */
+    --color-bg-main:   #FAFAF8;
+    --color-bg-accent: #F3F7F3;
+    --color-bg-card-a:  #FAFAF8;
+    --color-bg-input-a: #F5F5F1;
+
+    /* Brand */
+    --color-primary:         #6B9B6B;
+    --color-highlight-hero:  #B8D4B4;
+    --color-highlight-about: #7DAD7D;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B8D4B4;
+    color: #223622;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
