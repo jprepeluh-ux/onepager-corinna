@@ -427,7 +427,7 @@ function About() {
   return (
     <section id="ueber-mich" className="py-28 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Portrait */}
           <FadeIn className="relative" y={40}>
             <div className="relative max-w-sm mx-auto lg:mx-0 outline-none">
@@ -458,18 +458,28 @@ function About() {
             </h2>
             <div className="space-y-4 font-inter text-moss-700/75 leading-relaxed mb-8">
               <p>
-                Ich bin Corinna – Psychologin, Coach und bald auch approbierte Psychotherapeutin.
-                Meine Praxis <strong className="text-moss-800 font-semibold">CnC – Corinna Coaching</strong> ist
-                ein Ort, an dem du dich wirklich gesehen und gehört fühlen kannst.
+                Ich weiß, wie es sich anfühlt, keinen sicheren Ort in sich zu haben. Wenn Nähe nicht wirklich Halt gibt – und man früh lernt, stark zu sein, statt gehalten zu werden.
               </p>
               <p>
-                Nach meinem Masterstudium der Psychologie und Jahren der praktischen Arbeit weiß ich:
-                Heilung braucht Zeit, Vertrauen und den richtigen Raum. Ich begleite dich einfühlsam
-                und professionell – egal wo du gerade stehst.
+                Meine eigene Geschichte ist geprägt von fehlender sicherer Bindung und schmerzhaften Erfahrungen, die lange keinen Raum hatten. Und gleichzeitig war da schon früh ein leiser, aber klarer Wunsch: verstehen, fühlen, helfen.
               </p>
               <p>
-                Meine Praxis in der Hiltensberger Straße 48 öffnet im <strong className="text-moss-800 font-semibold">Juni 2026</strong>.
-                Das vollständige Therapieangebot folgt ab Oktober 2026 nach meiner Approbation.
+                Dieser Weg hat mich zunächst ins Ehrenamt geführt – unter anderem in die Arbeit mit Geflüchteten, wo ich Entspannungsangebote gegeben habe. Dort bin ich dem Thema Trauma auf eine tiefere Weise begegnet. Und ich habe erkannt, wie viele Menschen nicht „zu schwach", sondern zutiefst überfordert sind – von dem, was sie erlebt haben.
+              </p>
+              <p>
+                Heute begleite ich Menschen auf ihrem Weg zurück in ein Gefühl von innerer Sicherheit. In Einzelstunden, im Paar- oder Gruppensetting schaffe ich einen Raum, in dem alles sein darf – ohne Druck, ohne Bewertung.
+              </p>
+              <p>
+                In meine Arbeit fließen verschiedene Ansätze ein: Traumafachberatung, EMDR-Coaching, körperorientierte Methoden, Traumayoga sowie mein Hintergrund im Fitnesstraining. Denn ich bin überzeugt: Heilung passiert nicht nur im Verstehen – sondern vor allem im Körper.
+              </p>
+              <p>
+                Ich glaube daran, dass Heilung möglich ist. Nicht, weil wir die Vergangenheit ungeschehen machen können – sondern weil wir lernen können, uns heute anders zu begegnen. Der erste Schritt beginnt oft ganz leise. Mit dem Wunsch, dass es so, wie es gerade ist, nicht bleiben muss.
+              </p>
+              <p>
+                In meiner Begleitung geht es nicht darum, Dich „zu verändern" oder zu „reparieren". Sondern darum, gemeinsam einen Weg zu finden, auf dem Du Dich sicherer fühlen kannst – in Dir selbst und im Kontakt mit anderen.
+              </p>
+              <p>
+                Wenn Du Dir einen Raum wünscht, in dem Du nichts leisten musst, sondern einfach da sein darfst – dann bist Du bei mir willkommen.
               </p>
             </div>
 
