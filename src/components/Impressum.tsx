@@ -6,15 +6,15 @@ export default function Impressum() {
     <div className="min-h-screen bg-cream-50 font-inter">
       {/* Header */}
       <header className="bg-white border-b border-cream-200">
-        <div className="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Logo />
+        <div className="max-w-3xl mx-auto px-6 pt-4 pb-5">
           <a
             href="/"
-            className="flex items-center gap-2 text-sm text-moss-700 hover:text-moss-900 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-moss-700 hover:text-moss-900 transition-colors mb-3"
           >
             <ArrowLeft size={16} />
             Zurück
           </a>
+          <Logo />
         </div>
       </header>
 
@@ -35,7 +35,7 @@ export default function Impressum() {
             <h3 className="font-semibold text-moss-900 text-sm uppercase tracking-wider mb-2">
               Name
             </h3>
-            <p>Corinna [Nachname]</p>
+            <p>Corinna Meier</p>
           </div>
 
           <div>
@@ -43,8 +43,8 @@ export default function Impressum() {
               Anschrift
             </h3>
             <p>
-              [Strasse + Hausnummer]<br />
-              [PLZ Ort]<br />
+              Hiltenspergerstr. 48<br />
+              80796 München<br />
               Deutschland
             </p>
           </div>
