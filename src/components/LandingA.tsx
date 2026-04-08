@@ -856,7 +856,6 @@ function Footer() {
           <p className="font-inter text-xs">© 2026 CnC – Corinna Coaching. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <a href="#" className="font-inter text-xs hover:text-white transition-colors">Impressum</a>
-            <a href="#" className="font-inter text-xs hover:text-white transition-colors">Datenschutz</a>
           </div>
         </div>
       </div>
