@@ -829,7 +829,7 @@ function Footer() {
           <div>
             <Logo className="text-white h-16 w-auto mb-4" />
             <p className="font-inter text-sm leading-relaxed">
-              Psychologisches Coaching &amp; Traumatherapie in München. Eröffnung Juni 2026.
+              Psychologisches Coaching &amp; Traumafachberatung in München. Eröffnung Juni 2026.
             </p>
           </div>
           <div>
