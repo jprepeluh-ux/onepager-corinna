@@ -7,7 +7,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useInView, useScroll, AnimatePresence } from 'framer-motion'
 import {
-  Brain, HandHeart, UserCheck, Heart, Leaf, Eye, HeartHandshake,
+  Brain, HandHeart, Heart, Leaf, Eye, HeartHandshake, Activity, PersonStanding,
   ChevronDown, ChevronLeft, ChevronRight,
   Phone, Mail, MapPin, Star, Check, Plus, Minus
 } from 'lucide-react'
@@ -45,45 +45,51 @@ function FadeIn({
 
 const services = [
   {
-    icon: UserCheck,
-    title: 'Einzel-Coaching',
-    desc: 'Individuelle Begleitung auf deinem Weg zu mehr Klarheit, innerer Stärke und persönlichem Wachstum.',
+    icon: Leaf,
+    title: 'Traumayoga',
+    desc: 'Traumayoga oder traumasensibles Yoga ist eine achtsame Praxis, die Körperwahrnehmungen nutzt, um traumatisierten Menschen zu helfen, Sicherheit im eigenen Körper zu finden. Es fördert die Selbstregulation des Nervensystems, löst Verspannungen, baut Vertrauen auf und bietet Wahlfreiheit statt Leistungsdruck.',
     badge: null,
-  },
-  {
-    icon: HandHeart,
-    title: 'Traumatherapie',
-    desc: 'Sanfte, evidenzbasierte Aufarbeitung belastender Erfahrungen in einem sicheren, geschützten Rahmen.',
-    badge: 'Ab Oktober 2026',
   },
   {
     icon: Eye,
     title: 'EMDR',
-    desc: 'Eye Movement Desensitization and Reprocessing – eine der wirksamsten Methoden zur Traumabearbeitung.',
-    badge: 'Ab Oktober 2026',
+    desc: 'EMDR (Eye Movement Desensitization and Reprocessing) ist eine hochwirksame Methode zur Behandlung von Traumafolgestörungen, insbesondere der PTBS. Durch bilaterale Stimulation, oft schnelle Augenbewegungen, während das Trauma erinnert wird, verarbeitet das Gehirn belastende Erlebnisse. Die von Francine Shapiro entwickelte Methode ist wissenschaftlich anerkannt und aktiviert Selbstheilungskräfte.',
+    badge: null,
   },
   {
-    icon: Leaf,
-    title: 'Yoga & Achtsamkeit',
-    desc: 'Körperbasierte Übungen und Atemarbeit, die Geist und Körper nachhaltig in Einklang bringen.',
+    icon: HandHeart,
+    title: 'Traumafachberatung',
+    desc: 'Traumafachberatung ist ein beratendes, nichttherapeutisches Angebot zur Stabilisierung von Menschen nach traumatischen Erlebnissen. Der Fokus liegt auf der Förderung von Sicherheit, Alltagsbewältigung und Ressourcenstärkung, um Symptome zu lindern, ohne das Trauma tiefenpsychologisch aufzuarbeiten. Sie richtet sich auch an Angehörige.',
     badge: null,
   },
   {
     icon: Brain,
-    title: 'Kognitive Verhaltenstherapie',
-    desc: 'Strukturierte Methoden, um belastende Denkmuster zu erkennen, zu verstehen und dauerhaft zu verändern.',
-    badge: 'Ab Oktober 2026',
+    title: 'Psychologische Beratung',
+    desc: 'Psychologische Beratung ist eine professionelle, lösungs- und ressourcenorientierte Unterstützung für psychisch gesunde Menschen in schwierigen Lebenslagen, Krisen oder bei konkreten Konflikten. Sie hilft dabei, Handlungskompetenzen zu fördern, Stress abzubauen und persönliche Ziele zu erreichen.',
+    badge: null,
+  },
+  {
+    icon: Activity,
+    title: 'Traumasensibler Sport',
+    desc: 'Traumasensible Bewegungsangebote wirken traumatischen Beeinträchtigungen entgegen, indem das Sicherheitserleben gefördert, Angst- und Stressreaktionen reduziert und die Fähigkeit zur Selbstregulation gestärkt wird.',
+    badge: null,
   },
   {
     icon: Heart,
-    title: 'Selbstliebe & Körperarbeit',
-    desc: 'Tantrisch inspirierte Ansätze zur Stärkung des Körpergefühls, der Selbstakzeptanz und Sinnlichkeit.',
+    title: 'Tantra Yoga',
+    desc: 'Tantra Yoga ist eine ganzheitliche spirituelle Praxis, die Körper, Geist und Seele integriert. Tantra zielt auf die Erweiterung des Bewusstseins durch verschiedene Techniken ab, um die direkte Erfahrung der göttlichen Realität im täglichen Leben durch die Einheit von Bewusstsein und Energien zu erkennen.',
     badge: null,
   },
   {
     icon: HeartHandshake,
-    title: 'Krisenbegleitung',
-    desc: 'Sofortige, einfühlsame Unterstützung in akuten emotionalen Krisen und schwierigen Lebensphasen.',
+    title: 'Klientenzentrierte Therapie nach Carl Rogers',
+    desc: 'Klientenzentrierte Therapie ist ein humanistisches Verfahren, das den Menschen statt das Problem in den Mittelpunkt stellt. Durch Empathie, bedingungslose Wertschätzung und Echtheit des Therapeuten wird der Klient befähigt, sein Selbstbild zu verbessern und Potenziale zur Selbstentfaltung zu nutzen.',
+    badge: null,
+  },
+  {
+    icon: PersonStanding,
+    title: 'Seniorenfitnesstraining',
+    desc: 'Bewegungen für Senioren – Erleben Sie ein Training, das Körper und Geist stärkt – mit Raum für Ruhe und neue Energie. Mehr Lebensqualität durch sanfte Bewegungen.',
     badge: null,
   },
 ]
@@ -122,7 +128,7 @@ const faqs = [
   },
   {
     q: 'Nehmen Sie Kassenpatienten an?',
-    a: 'Aktuell arbeite ich ausschließlich mit Privatversicherten und Selbstzahlern. Kassenärztliche Leistungen sind erst nach Abschluss der Approbation ab Oktober 2026 geplant.',
+    a: 'Aktuell arbeite ich ausschließlich mit Privatversicherten und Selbstzahlern.',
   },
   {
     q: 'Was unterscheidet Coaching von Therapie?',
@@ -134,7 +140,7 @@ const faqs = [
   },
   {
     q: 'Was ist EMDR und für wen ist es geeignet?',
-    a: 'EMDR (Eye Movement Desensitization and Reprocessing) ist eine wissenschaftlich anerkannte Methode zur Verarbeitung von Traumata und belastenden Erinnerungen. Sie ist ab Oktober 2026 verfügbar.',
+    a: 'EMDR (Eye Movement Desensitization and Reprocessing) ist eine wissenschaftlich anerkannte Methode zur Verarbeitung von Traumata und belastenden Erinnerungen.',
   },
 ]
 
@@ -418,7 +424,7 @@ function About() {
   const qualifications = [
     'Master of Science, Psychologie',
     'Ausbildung zur Heilpraktikerin (Psychotherapie)',
-    'EMDR-Zertifizierung (ab Oktober 2026)',
+    'EMDR-Zertifizierung',
     'Systemische Beratung & Coaching',
     'Traumasensible Yoga-Ausbildung',
     'Zertifizierte Achtsamkeitslehrerin (MBSR)',
@@ -442,7 +448,7 @@ function About() {
               {/* Floating card */}
               <div className="absolute -bottom-5 -right-4 bg-white rounded-card-a shadow-xl px-5 py-4 border border-cream-100">
                 <p className="font-playfair font-semibold text-heading-a text-sm">Corinna</p>
-                <p className="font-inter text-sage-600 text-xs mt-0.5">MSc Psychologie · Coach · Therapeutin</p>
+                <p className="font-inter text-sage-600 text-xs mt-0.5">Coach · Beratung und Begleitung</p>
               </div>
             </div>
           </FadeIn>
@@ -610,7 +616,7 @@ function PricingFAQ() {
       title: 'Privatversicherung & Beihilfe',
       price: '100',
       unit: '/ 50 Min.',
-      features: ['Erstattung durch private KV', 'Alle Coaching-Leistungen', 'Therapie ab Oktober 2026', 'Kostenloser Erstkontakt'],
+      features: ['Erstattung durch private KV', 'Alle Leistungen', 'Kostenloser Erstkontakt'],
       cta: 'Termin anfragen',
       highlighted: false,
     },
@@ -618,7 +624,7 @@ function PricingFAQ() {
       title: 'Selbstzahler',
       price: '85',
       unit: '/ 50 Min.',
-      features: ['Flexible Zahlungsarten', 'Alle Coaching-Leistungen', 'Therapie ab Oktober 2026', 'Kostenloser Erstkontakt'],
+      features: ['Flexible Zahlungsarten', 'Alle Leistungen', 'Kostenloser Erstkontakt'],
       cta: 'Termin anfragen',
       highlighted: true,
     },
