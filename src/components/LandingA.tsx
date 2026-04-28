@@ -293,7 +293,7 @@ function Hero() {
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
           backgroundImage:
-            'url(/hero-bg.jpg)',
+            'url(/Bergkette.png)',
         }}
       />
       {/* Gradient overlay */}
