@@ -435,11 +435,11 @@ function About() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Portrait */}
-          <FadeIn className="relative" y={40}>
+          <FadeIn className="relative lg:sticky lg:top-8" y={40}>
             <div className="relative max-w-sm mx-auto lg:mx-0 outline-none">
               <div className="relative aspect-[3/4] rounded-card-a overflow-hidden shadow-2xl">
                 <img
-                  src="/corinna_portrait.jpeg"
+                  src="/Corinna_Mayer_portrait.png"
                   alt="Portrait Corinna"
                   className="w-full h-full object-cover"
                 />
@@ -464,32 +464,74 @@ function About() {
             </h2>
             <div className="space-y-4 font-inter text-moss-700/75 leading-relaxed mb-8">
               <p>
-                Ich weiß, wie es sich anfühlt, keinen sicheren Ort in sich zu haben. Wenn Nähe nicht wirklich Halt gibt – und man früh lernt, stark zu sein, statt gehalten zu werden.
+                Ich weiß, wie es sich anfühlt, keinen sicheren Ort in sich zu haben. Wenn Nähe keinen Halt gibt – und man früh lernt, alleine durchzuhalten, statt gestützt und getragen zu werden.
               </p>
               <p>
-                Meine eigene Geschichte ist geprägt von fehlender sicherer Bindung und schmerzhaften Erfahrungen, die lange keinen Raum hatten. Und gleichzeitig war da schon früh ein leiser, aber klarer Wunsch: verstehen, fühlen, helfen.
+                Meine eigene Geschichte ist geprägt von fehlender sicherer Bindung und schmerzhaften Erfahrungen, die lange keinen Raum in meinem Leben hatten. Und gleichzeitig war da schon früh ein leiser, aber klarer Wunsch: verstehen, fühlen, helfen.
               </p>
               <p>
-                Dieser Weg hat mich zunächst ins Ehrenamt geführt – unter anderem in die Arbeit mit Geflüchteten, wo ich Entspannungsangebote gegeben habe. Dort bin ich dem Thema Trauma auf eine tiefere Weise begegnet. Und ich habe erkannt, wie viele Menschen nicht „zu schwach", sondern zutiefst überfordert sind – von dem, was sie erlebt haben.
+                Dieser Weg führte mich zunächst ins Ehrenamt – unter anderem in die Arbeit mit Geflüchteten, wo ich Entspannungskonzepte angeboten habe. Dort bin ich dem Thema Trauma auf eine tiefere Weise begegnet. Und ich habe erkannt, wie viele Menschen zutiefst überfordert sind – von dem, was sie erlebt haben.
               </p>
               <p>
-                Heute begleite ich Menschen auf ihrem Weg zurück in ein Gefühl von innerer Sicherheit. In Einzelstunden, im Paar- oder Gruppensetting schaffe ich einen Raum, in dem alles sein darf – ohne Druck, ohne Bewertung.
+                Heute begleite ich Menschen auf ihrem Weg zurück in ein Gefühl von innerer Sicherheit und eigener Stärke.
               </p>
               <p>
-                In meine Arbeit fließen verschiedene Ansätze ein: Traumafachberatung, EMDR-Coaching, körperorientierte Methoden, Traumayoga sowie mein Hintergrund im Fitnesstraining. Denn ich bin überzeugt: Heilung passiert nicht nur im Verstehen – sondern vor allem im Körper.
+                In Einzelstunden, im Paar- oder Gruppensetting schaffe ich einen Raum, in dem alles sein darf – ohne Druck, ohne Bewertung.
               </p>
               <p>
-                Ich glaube daran, dass Heilung möglich ist. Nicht, weil wir die Vergangenheit ungeschehen machen können – sondern weil wir lernen können, uns heute anders zu begegnen. Der erste Schritt beginnt oft ganz leise. Mit dem Wunsch, dass es so, wie es gerade ist, nicht bleiben muss.
+                In meine Arbeit fließen verschiedenste Ansätze ein: Traumafachberatung, EMDR-Coaching, körperorientierte Methoden, Traumayoga sowie mein Hintergrund im Fitnesstraining. Ebenso prägt meine Arbeit eine tiefe Verbundenheit zur Natur – sowie die Inspiration durch die Einfachheit und Ursprünglichkeit, wie sie in indigenen Kulturen gelebt wird. Denn ich bin überzeugt: Heilung geschieht nicht nur im Verstehen, – sondern ebenso im Körper.
               </p>
               <p>
-                In meiner Begleitung geht es nicht darum, Dich „zu verändern" oder zu „reparieren". Sondern darum, gemeinsam einen Weg zu finden, auf dem Du Dich sicherer fühlen kannst – in Dir selbst und im Kontakt mit anderen.
+                Ich glaube daran, dass Heilung möglich ist. Nicht, weil wir die Vergangenheit ungeschehen machen können – sondern weil wir lernen können, uns heute anders zu begegnen.
               </p>
               <p>
-                Wenn Du Dir einen Raum wünscht, in dem Du nichts leisten musst, sondern einfach da sein darfst – dann bist Du bei mir willkommen.
+                Der erste Schritt beginnt oft ganz leise. Mit dem Gefühl, dass es so, wie es gerade ist, nicht bleiben muss. Die nächsten Schritte gehe ich gerne mit Dir.
+              </p>
+              <p>
+                In meiner Begleitung geht es nicht darum, Dich zu verändern oder etwas an Dir zu reparieren. Sondern darum, gemeinsam einen Weg zu finden, auf dem Du Dich sicherer fühlen kannst – in Dir selbst und im Kontakt mit anderen.
+              </p>
+              <p>
+                Wenn Du Dir einen Raum wünschst, in dem Du nichts leisten musst, sondern einfach da sein darfst – dann bist Du bei mir willkommen. Ich begleite Dich auf dem Weg zurück zu Dir.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="mt-8 pt-8 border-t border-cream-100">
+              <h3 className="font-playfair font-semibold text-xl text-heading-a mb-4">Meine Geschichte</h3>
+              <div className="space-y-4 font-inter text-moss-700/75 leading-relaxed">
+                <p>
+                  1977 wurde ich in Freising geboren und bin in Germering aufgewachsen. Schon früh war in mir der Wunsch, etwas Sinnvolles zu tun und Menschen wirklich zu erreichen.
+                </p>
+                <p>
+                  1995 folgte ich diesem inneren Ruf und ging nach Mexiko, um mit Straßenkindern zu arbeiten. Diese Zeit hat mich tief geprägt. Zu sehen, dass jedes Kind die gleichen grundlegenden Bedürfnisse hat – und wie oft wir als Gesellschaft Kinder in ihren ersten Schritten ungeschützt lassen – hat meinen weiteren Weg entscheidend beeinflusst. Seitdem setze ich mich aus voller Überzeugung für Kinder und ihre Entwicklung ein.
+                </p>
+                <p>
+                  Nach Aufenthalten in Peru, Spanien, Griechenland und Italien wurde 2002 mein erster Sohn geboren. Im selben Jahr begann ich ein Fernstudium im Bereich Journalismus, veröffentlichte erste Texte und entwickelte meine kreative Ausdrucksform weiter.
+                </p>
+                <p>
+                  2004 ließ ich mich zur Schau- und Puppenspielerin sowie Clown ausbilden und gründete später ein eigenes mobiles Theater, mit dem ich von 2008 bis 2015 unterwegs war. Kunst, Begegnung und Ausdruck waren dabei immer zentrale Elemente meiner Arbeit. 2012 wurde mein zweiter Sohn geboren.
+                </p>
+                <p>
+                  Parallel dazu vertiefte ich meine Arbeit mit Menschen zunehmend auch auf körperlicher und therapeutischer Ebene: 2015 absolvierte ich eine Ausbildung zur Fitnesstrainerin und Yogalehrerin.
+                </p>
+                <p>
+                  2020, mit der Geburt meines dritten Sohnes, begann ich mich intensiv mit traumasensibler Arbeit auseinanderzusetzen und ließ mich zur Traumayogatherapeutin und Traumafachberaterin ausbilden.
+                </p>
+                <p>
+                  Von 2021 bis 2023 folgten weitere Qualifikationen, unter anderem als EMDR-Coach sowie in klientenzentrierter Gesprächsführung nach Carl Rogers.
+                </p>
+                <p>
+                  2023 gründete ich den Verein „Hina und Paul – Prävention und Aufarbeitung von (sexueller) Gewalt in der Kindheit e.V." Ein Herzensprojekt, das ein wichtiger Teil meines Wirkens ist.
+                </p>
+                <p>
+                  Zuletzt erweiterte ich mein Wissen als Psychologische Beraterin und Tantra-Yoga-Lehrerin.
+                </p>
+                <p>
+                  Seit 2026 arbeite ich selbstständig mit dem Schwerpunkt auf Krisenbegleitung – mit dem Ziel, Menschen in herausfordernden Lebensphasen zu stabilisieren, zu stärken und auf ihrem Weg zurück zu sich selbst zu begleiten.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8">
               {qualifications.map((q) => (
                 <div key={q} className="flex items-center gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-sage-100 flex items-center justify-center flex-shrink-0">
