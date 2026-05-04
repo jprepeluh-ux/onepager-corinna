@@ -826,7 +826,7 @@ function Contact() {
         <FadeIn delay={0.1}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             {[
-              { icon: Phone, label: 'Telefon', value: '+49 89 / 000 00 00', href: 'tel:+498900000000' },
+              { icon: Phone, label: 'Telefon', value: '+49 176 77650625', href: 'tel:+4917677650625' },
               { icon: Mail, label: 'E-Mail', value: 'c.mayer@camy-coaching.eu', href: 'mailto:c.mayer@camy-coaching.eu' },
               { icon: MapPin, label: 'Adresse', value: 'Hiltensberger Str. 48, 80796 München', href: 'https://www.google.com/maps/search/?api=1&query=Hiltensberger+Str.+48,+80796+München' },
             ].map((c) => (
