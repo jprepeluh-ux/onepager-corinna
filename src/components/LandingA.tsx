@@ -827,7 +827,7 @@ function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             {[
               { icon: Phone, label: 'Telefon', value: '+49 89 / 000 00 00', href: 'tel:+498900000000' },
-              { icon: Mail, label: 'E-Mail', value: 'hallo@cnc-coaching.de', href: 'mailto:hallo@cnc-coaching.de' },
+              { icon: Mail, label: 'E-Mail', value: 'c.mayer@camy-coaching.eu', href: 'mailto:c.mayer@camy-coaching.eu' },
               { icon: MapPin, label: 'Adresse', value: 'Hiltensberger Str. 48, 80796 München', href: 'https://www.google.com/maps/search/?api=1&query=Hiltensberger+Str.+48,+80796+München' },
             ].map((c) => (
               <a
@@ -851,7 +851,7 @@ function Contact() {
 
         <FadeIn delay={0.2}>
           <a
-            href="mailto:hallo@cnc-coaching.de?subject=Anfrage%20Kostenloses%20Erstgespr%C3%A4ch"
+            href="mailto:c.mayer@camy-coaching.eu?subject=Anfrage%20Kostenloses%20Erstgespr%C3%A4ch"
             className="inline-block px-10 py-4 rounded-button-a bg-sage-500 hover:bg-sage-600 text-white font-inter font-semibold tracking-[0.75px] text-base transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Jetzt Erstgespräch anfragen
@@ -900,7 +900,7 @@ function Footer() {
             <address className="not-italic font-inter text-sm leading-loose">
               Hiltensberger Straße 48<br />
               80796 München<br />
-              <a href="mailto:hallo@cnc-coaching.de" className="hover:text-white transition-colors">hallo@cnc-coaching.de</a>
+              <a href="mailto:c.mayer@camy-coaching.eu" className="hover:text-white transition-colors">c.mayer@camy-coaching.eu</a>
             </address>
           </div>
         </div>
