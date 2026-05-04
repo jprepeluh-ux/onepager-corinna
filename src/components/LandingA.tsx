@@ -422,12 +422,16 @@ function Services() {
 
 function About() {
   const qualifications = [
-    'Master of Science, Psychologie',
-    'Ausbildung zur Heilpraktikerin (Psychotherapie)',
-    'EMDR-Zertifizierung',
-    'Systemische Beratung & Coaching',
-    'Traumasensible Yoga-Ausbildung',
-    'Zertifizierte Achtsamkeitslehrerin (MBSR)',
+    'Traumayogatherapeutin',
+    'Traumafachberaterin',
+    'Psychologische Beraterin',
+    'Klientenorientierte Gesprächsführung nach Carl Rogers',
+    'EMDR-Coach',
+    'Yogalehrerin',
+    'Fitnesstrainer (B-Lizenz)',
+    'Seniorenfitnesstrainerin',
+    'Lauftrainerin',
+    'Tantra-Yoga-Lehrerin',
   ]
 
   return (
