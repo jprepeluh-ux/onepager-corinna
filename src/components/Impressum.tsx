@@ -35,7 +35,7 @@ export default function Impressum() {
             <h3 className="font-semibold text-moss-900 text-sm uppercase tracking-wider mb-2">
               Name
             </h3>
-            <p>Corinna Meier</p>
+            <p>Corinna Mayer</p>
           </div>
 
           <div>
@@ -54,12 +54,17 @@ export default function Impressum() {
               Kontakt
             </h3>
             <p>
-              Telefon: [Telefonnummer]<br />
-              E-Mail: <a
-                href="mailto:[E-Mail-Adresse]"
+              Telefon: <a
+                href="tel:+4917677650625"
                 className="text-sage-600 hover:text-sage-800 transition-colors"
               >
-                [E-Mail-Adresse]
+                +49 176 77650625
+              </a><br />
+              E-Mail: <a
+                href="mailto:c.mayer@camy-coaching.eu"
+                className="text-sage-600 hover:text-sage-800 transition-colors"
+              >
+                c.mayer@camy-coaching.eu
               </a>
             </p>
           </div>
