@@ -293,7 +293,7 @@ function Hero() {
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
           backgroundImage:
-            'url(/Bergkette.png)',
+            'url(/Bergkette.avif)',
         }}
       />
       {/* Gradient overlay */}
@@ -442,11 +442,14 @@ function About() {
           <FadeIn className="relative lg:sticky lg:top-8" y={40}>
             <div className="relative max-w-sm mx-auto lg:mx-0 outline-none">
               <div className="relative aspect-[3/4] rounded-card-a overflow-hidden shadow-2xl">
-                <img
-                  src="/Corinna_Mayer_portrait.png"
-                  alt="Portrait Corinna"
-                  className="w-full h-full object-cover"
-                />
+                <picture>
+                  <source srcSet="/Corinna_Mayer_portrait.avif" type="image/avif" />
+                  <img
+                    src="/Corinna_Mayer_portrait.png"
+                    alt="Portrait Corinna Mayer"
+                    className="w-full h-full object-cover"
+                  />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-moss-900/20 to-transparent" />
               </div>
               {/* Floating card */}
