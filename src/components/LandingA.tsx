@@ -905,7 +905,7 @@ function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="font-inter text-xs">© 2026 CnC – Corinna Coaching. Alle Rechte vorbehalten.</p>
+          <p className="font-inter text-xs">© 2026 Corinna Mayer Coaching und Beratung. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <a href="/impressum" className="font-inter text-xs hover:text-white transition-colors">Impressum</a>
           </div>
