@@ -289,16 +289,13 @@ function Hero() {
   return (
     <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
-      <div className="absolute inset-0 scale-105 pointer-events-none">
-        <picture className="block w-full h-full">
-          <source srcSet="/Bergkette.avif" type="image/avif" />
-          <img
-            src="/Bergkette.png"
-            alt=""
-            className="block w-full h-full object-cover object-center"
-          />
-        </picture>
-      </div>
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{
+          backgroundImage:
+            'image-set(url("/Bergkette.avif") type("image/avif"), url("/Bergkette.png") type("image/png"))',
+        }}
+      />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-moss-900/80 via-moss-800/50 to-sage-600/30" />
       <div
