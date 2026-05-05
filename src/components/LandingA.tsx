@@ -289,14 +289,16 @@ function Hero() {
   return (
     <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
-      <picture className="absolute inset-0 scale-105 pointer-events-none">
-        <source srcSet="/Bergkette.avif" type="image/avif" />
-        <img
-          src="/Bergkette.png"
-          alt=""
-          className="w-full h-full object-cover object-center"
-        />
-      </picture>
+      <div className="absolute inset-0 scale-105 pointer-events-none">
+        <picture className="block w-full h-full">
+          <source srcSet="/Bergkette.avif" type="image/avif" />
+          <img
+            src="/Bergkette.png"
+            alt=""
+            className="block w-full h-full object-cover object-center"
+          />
+        </picture>
+      </div>
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-moss-900/80 via-moss-800/50 to-sage-600/30" />
       <div
