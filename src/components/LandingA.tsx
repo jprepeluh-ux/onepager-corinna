@@ -857,7 +857,7 @@ function Contact() {
             {[
               { icon: Phone, label: 'Telefon', value: '+49 176 77650625', href: 'tel:+4917677650625' },
               { icon: Mail, label: 'E-Mail', value: 'c.mayer@camy-coaching.eu', href: 'mailto:c.mayer@camy-coaching.eu' },
-              { icon: MapPin, label: 'Adresse', value: 'Hiltensberger Str. 48, 80796 München', href: 'https://www.google.com/maps/search/?api=1&query=Hiltensberger+Str.+48,+80796+München' },
+              { icon: MapPin, label: 'Adresse', value: 'Hiltenspergerstr. 48, 80796 München', href: 'https://www.google.com/maps/search/?api=1&query=Hiltenspergerstr.+48,+80796+München' },
             ].map((c) => (
               <a
                 key={c.label}
@@ -927,7 +927,7 @@ function Footer() {
           <div>
             <h4 className="font-inter font-semibold text-white text-sm mb-4 uppercase tracking-widest">Adresse</h4>
             <address className="not-italic font-inter text-sm leading-loose">
-              Hiltensberger Straße 48<br />
+              Hiltenspergerstr. 48<br />
               80796 München<br />
               <a href="mailto:c.mayer@camy-coaching.eu" className="hover:text-white transition-colors">c.mayer@camy-coaching.eu</a>
             </address>
