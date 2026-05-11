@@ -4,7 +4,7 @@
  * Palette: warm cream bg, sage-green accents, golden warmth
  * Feel: empathic, approachable, professionally warm
  */
-import { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { motion, useInView, useScroll, AnimatePresence } from 'framer-motion'
 import {
   Brain, HandHeart, Heart, Leaf, Eye, HeartHandshake, Activity, PersonStanding,
@@ -292,7 +292,7 @@ function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
-          backgroundImage: 'url("/Bergkette.png")',
+          backgroundImage: 'url("/Hero_BG_image_Bergwald.png")',
         }}
       />
       {/* Gradient overlay */}
@@ -654,34 +654,79 @@ function Testimonials() {
   )
 }
 
+// ─── Impressionen ─────────────────────────────────────────────────────────────
+
+const impressions = [
+  {
+    src: '/01_Sitzung_Psychologische_Beratung.png',
+    alt: 'Eine ruhige Beratungssituation – zwei Personen im vertrauensvollen Gespräch',
+    caption: 'Die eigene Geschichte betrachten – mit Abstand, Mitgefühl und neuer Klarheit',
+  },
+  {
+    src: '/02_Sitzung_Psychologische_Beratung_2.png',
+    alt: 'Zwei Menschen erkunden gemeinsam neue Perspektiven in einer offenen Atmosphäre',
+    caption: 'Gemeinsam neue Wege entdecken',
+  },
+  {
+    src: '/03_Sitzung_EMDR.png',
+    alt: 'Eine EMDR-Sitzung: behutsame Begleitung beim Verarbeiten belastender Erinnerungen',
+    caption: 'Mit EMDR belastende Erinnerungen behutsam verarbeiten',
+  },
+]
+
+function Impressionen() {
+  return (
+    <section className="py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <FadeIn className="text-center mb-14">
+          <span className="text-xs uppercase tracking-[0.2em] text-sage-600 font-inter font-medium">
+            Einblicke
+          </span>
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-heading-a mt-3">
+            Impressionen
+          </h2>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {impressions.map((img, i) => (
+            <FadeIn key={img.src} delay={i * 0.1}>
+              <div className="flex flex-col">
+                <div className="overflow-hidden rounded-card-a">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-72 object-cover"
+                  />
+                </div>
+                <p className="font-inter text-sm text-moss-700/70 mt-4 leading-snug px-2">
+                  {img.caption}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ─── Pricing & FAQ ────────────────────────────────────────────────────────────
+
+const pricingItems = [
+  { name: 'Psychologische Beratung', duration: '50 Minuten', price: '80 €' },
+  { name: 'Traumayoga', duration: '60 Minuten', price: '60 €' },
+  { name: 'Psychologische Beratung mit Traumayoga', duration: '60–90 Minuten', price: '80–100 €' },
+  { name: 'EMDR', duration: '60 Minuten', price: '80 €' },
+  { name: 'Traumasensible Bewegungseinheiten', duration: '30–60 Minuten', price: 'ab 50 €' },
+]
 
 function PricingFAQ() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
-  const pricing = [
-    {
-      title: 'Privatversicherung & Beihilfe',
-      price: '100',
-      unit: '/ 50 Min.',
-      features: ['Erstattung durch private KV', 'Alle Leistungen', 'Kostenloser Erstkontakt'],
-      cta: 'Termin anfragen',
-      highlighted: false,
-    },
-    {
-      title: 'Selbstzahler',
-      price: '85',
-      unit: '/ 50 Min.',
-      features: ['Flexible Zahlungsarten', 'Alle Leistungen', 'Kostenloser Erstkontakt'],
-      cta: 'Termin anfragen',
-      highlighted: true,
-    },
-  ]
-
   return (
     <section id="preise" className="py-28 bg-cream-50">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Pricing */}
+        {/* Pricing Header */}
         <FadeIn className="text-center mb-14">
           <span className="text-xs uppercase tracking-[0.2em] text-sage-600 font-inter font-medium">
             Transparenz
@@ -694,70 +739,52 @@ function PricingFAQ() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-20">
-          {pricing.map((p, i) => (
-            <FadeIn key={p.title} delay={i * 0.1}>
-              <div
-                className={`rounded-card-a p-8 h-full flex flex-col ${
-                  p.highlighted
-                    ? 'bg-sage-500 text-white shadow-xl shadow-sage-300/30'
-                    : 'bg-white border border-sage-100 shadow-sm'
-                }`}
-              >
-                <h3
-                  className={`font-inter font-semibold text-sm mb-6 ${
-                    p.highlighted ? 'text-white/80' : 'text-moss-700'
-                  }`}
-                >
-                  {p.title}
-                </h3>
-                <div className="flex items-end gap-2 mb-6">
-                  <span
-                    className={`font-playfair font-bold text-5xl ${
-                      p.highlighted ? 'text-white' : 'text-heading-a'
-                    }`}
-                  >
-                    {p.price}€
-                  </span>
-                  <span
-                    className={`font-inter text-sm mb-2 ${
-                      p.highlighted ? 'text-white/60' : 'text-moss-600/60'
-                    }`}
-                  >
-                    {p.unit}
-                  </span>
-                </div>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {p.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2.5">
-                      <Check
-                        size={14}
-                        className={p.highlighted ? 'text-white/80' : 'text-sage-500'}
-                      />
-                      <span
-                        className={`font-inter text-sm ${
-                          p.highlighted ? 'text-white/80' : 'text-moss-700/70'
-                        }`}
-                      >
-                        {f}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+        {/* Services Card */}
+        <FadeIn delay={0.1}>
+          <div className="max-w-2xl mx-auto mb-10">
+            <div className="bg-sage-500 rounded-card-a shadow-xl shadow-sage-300/30 overflow-hidden">
+              {pricingItems.map((s, i) => (
+                <React.Fragment key={s.name}>
+                  <div className="flex items-center justify-between gap-4 px-8 py-5">
+                    <div>
+                      <p className="font-inter font-semibold text-white text-sm leading-snug">{s.name}</p>
+                      <p className="font-inter text-white/60 text-xs mt-0.5">{s.duration}</p>
+                    </div>
+                    <span className="font-playfair font-bold text-white text-2xl whitespace-nowrap">
+                      {s.price.startsWith('ab ') ? (
+                        <><span className="font-inter font-normal text-xs text-white">ab </span>{s.price.slice(3)}</>
+                      ) : s.price}
+                    </span>
+                  </div>
+                  {i < pricingItems.length - 1 && (
+                    <div className="mx-8 border-t border-white/10" />
+                  )}
+                </React.Fragment>
+              ))}
+              <div className="mx-8 border-t border-white/10" />
+              <div className="px-8 py-5">
                 <a
                   href="#kontakt"
-                  className={`block text-center py-3 rounded-button-a font-inter font-semibold tracking-[0.75px] text-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${
-                    p.highlighted
-                      ? 'bg-white text-sage-600 hover:bg-cream-50'
-                      : 'bg-sage-500 text-white hover:bg-sage-600'
-                  }`}
+                  className="block text-center py-3 rounded-button-a font-inter font-semibold tracking-[0.75px] text-sm bg-white text-sage-600 hover:bg-cream-50 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
                 >
-                  {p.cta}
+                  Termin anfragen
                 </a>
               </div>
-            </FadeIn>
-          ))}
-        </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Copy Text */}
+        <FadeIn delay={0.2}>
+          <div className="max-w-2xl mx-auto mb-20">
+            <p className="font-inter text-sm text-moss-700/70 leading-relaxed">
+              Meine Arbeit versteht sich als achtsame und individuelle Begleitung für Menschen in herausfordernden Lebenssituationen. Dabei ist mir wichtig, einen geschützten, wertschätzenden und professionellen Rahmen zu schaffen, in dem Entwicklung, Stabilisierung und innere Bewegung möglich werden dürfen. Die Honorare orientieren sich an der Zeit, Erfahrung, Fortbildungen und der sorgfältigen Vorbereitung und Begleitung jeder Sitzung. Gleichzeitig wünsche ich mir, dass Unterstützung nicht ausschließlich von den finanziellen Möglichkeiten abhängt. Deshalb halte ich ein begrenztes Kontingent an vergünstigten Plätzen für Menschen mit geringerem Einkommen bereit.
+            </p>
+            <p className="font-inter text-sm text-moss-700/70 leading-relaxed mt-4">
+              Wenn Du das Gefühl hast, dass der reguläre Betrag für Dich momentan schwer tragbar ist, sprich mich gerne vertrauensvoll an. Gemeinsam finden wir – wenn möglich – eine passende Lösung.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* FAQ */}
         <FadeIn className="text-center mb-10">
@@ -926,6 +953,7 @@ export default function LandingA() {
       <Hero />
       <Services />
       <About />
+      <Impressionen />
       <Testimonials />
       <PricingFAQ />
       <Contact />
