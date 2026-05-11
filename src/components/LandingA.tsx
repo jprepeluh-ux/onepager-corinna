@@ -434,7 +434,7 @@ function About() {
   ]
 
   return (
-    <section id="ueber-mich" className="py-28 bg-white">
+    <section id="ueber-mich" className="pt-28 pb-14 md:py-28 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Portrait */}
@@ -676,7 +676,7 @@ const impressions = [
 
 function Impressionen() {
   return (
-    <section className="py-28 bg-white">
+    <section className="pt-14 pb-28 md:py-28 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn className="text-center mb-14">
           <span className="text-xs uppercase tracking-[0.2em] text-sage-600 font-inter font-medium">
