@@ -127,10 +127,6 @@ const faqs = [
     a: 'Das kostenlose Erstgespräch dauert ca. 20 Minuten und findet telefonisch oder per Video statt. Wir lernen uns kennen, besprechen dein Anliegen und klären, ob wir gut zusammenpassen.',
   },
   {
-    q: 'Nehmen Sie Kassenpatienten an?',
-    a: 'Aktuell arbeite ich ausschließlich mit Privatversicherten und Selbstzahlern.',
-  },
-  {
     q: 'Was unterscheidet Coaching von Therapie?',
     a: 'Coaching fokussiert auf konkrete Ziele, persönliches Wachstum und Ressourcenaktivierung – ideal für Menschen ohne klinische Diagnose. Therapie adressiert tieferliegende psychische Erkrankungen und Traumata.',
   },
@@ -717,7 +713,7 @@ const pricingItems = [
   { name: 'Traumayoga', duration: '60 Minuten', price: '60 €' },
   { name: 'Psychologische Beratung mit Traumayoga', duration: '60–90 Minuten', price: '80–100 €' },
   { name: 'EMDR', duration: '60 Minuten', price: '80 €' },
-  { name: 'Traumasensible Bewegungseinheiten', duration: '30–60 Minuten', price: 'ab 50 €' },
+  { name: 'Traumasensible Bewegungseinheiten', duration: '30–60 Minuten', price: 'ab 30 €' },
 ]
 
 function PricingFAQ() {
