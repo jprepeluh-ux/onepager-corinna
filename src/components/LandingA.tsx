@@ -8,6 +8,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { motion, useInView, useScroll, AnimatePresence } from 'framer-motion'
 import {
   Brain, HandHeart, Heart, Leaf, Eye, HeartHandshake, Activity, PersonStanding,
+  Users, UsersRound,
   ChevronDown, ChevronLeft, ChevronRight,
   Phone, Mail, MapPin, Star, Check, Plus, Minus
 } from 'lucide-react'
@@ -78,6 +79,18 @@ const services = [
     icon: Heart,
     title: 'Tantra Yoga',
     desc: 'Tantra Yoga ist eine ganzheitliche spirituelle Praxis, die Körper, Geist und Seele integriert. Tantra zielt auf die Erweiterung des Bewusstseins durch verschiedene Techniken ab, um die direkte Erfahrung der göttlichen Realität im täglichen Leben durch die Einheit von Bewusstsein und Energien zu erkennen.',
+    badge: null,
+  },
+  {
+    icon: Users,
+    title: 'Paarberatung',
+    desc: 'Beziehungen können Kraftquelle, Spiegel und Entwicklungsraum zugleich sein – und manchmal geraten genau dort Nähe, Vertrauen und Kommunikation aus dem Gleichgewicht. In meiner Paarberatung begleite ich Paare achtsam und wertschätzend dabei, wieder miteinander in Verbindung zu kommen, festgefahrene Muster zu erkennen und neue Wege im Miteinander zu entwickeln. Dabei fließen sowohl psychologisches Verständnis als auch körperorientierte und traumasensible Ansätze in die Arbeit mit ein.',
+    badge: null,
+  },
+  {
+    icon: UsersRound,
+    title: 'Gruppenberatung',
+    desc: 'Befinden Sie sich aktuell in einer schweren Lebenskrise, fühlen sich isoliert oder leiden unter einem belasteten Essverhalten? In schwierigen Phasen zieht man sich oft zurück und denkt, man müsse alles alleine schaffen. Doch gerade bei Krisen und Mustern wie Essstörungen liegt eine enorme Kraft im gemeinsamen Austausch. Die Gruppen bieten Ihnen einen geschützten, bewertungsfreien Raum. Hier treffen Sie auf Menschen, die sich in ähnlichen Situationen befinden wie Sie selbst. Sie müssen sich nicht erklären – Sie werden verstanden.',
     badge: null,
   },
   {
@@ -351,11 +364,13 @@ function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      <motion.button
+        onClick={() => document.querySelector('#leistungen')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer hover:opacity-100 transition-opacity"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.6 }}
+        aria-label="Zum Angebot scrollen"
       >
         <span className="text-white/50 text-xs font-inter tracking-widest uppercase">Mehr entdecken</span>
         <motion.div
@@ -364,7 +379,7 @@ function Hero() {
         >
           <ChevronDown size={20} className="text-white/50" />
         </motion.div>
-      </motion.div>
+      </motion.button>
     </section>
   )
 }
@@ -709,7 +724,9 @@ function Impressionen() {
 // ─── Pricing & FAQ ────────────────────────────────────────────────────────────
 
 const pricingItems = [
-  { name: 'Psychologische Beratung', duration: '50 Minuten', price: '80 €' },
+  { name: 'Psychologische Beratung', duration: '50 Minuten', price: '95 €' },
+  { name: 'Paarberatung', duration: '', price: '110 €' },
+  { name: 'Gruppenberatung', duration: '', price: '30 €' },
   { name: 'Traumayoga', duration: '60 Minuten', price: '60 €' },
   { name: 'Psychologische Beratung mit Traumayoga', duration: '60–90 Minuten', price: '80–100 €' },
   { name: 'EMDR', duration: '60 Minuten', price: '80 €' },
@@ -853,7 +870,7 @@ function Contact() {
             {[
               { icon: Phone, label: 'Telefon', value: '+49 176 77650625', href: 'tel:+4917677650625' },
               { icon: Mail, label: 'E-Mail', value: 'c.mayer@camy-coaching.eu', href: 'mailto:c.mayer@camy-coaching.eu' },
-              { icon: MapPin, label: 'Adresse', value: 'Hiltenspergerstr. 48, 80796 München', href: 'https://www.google.com/maps/search/?api=1&query=Hiltenspergerstr.+48,+80796+München' },
+              { icon: MapPin, label: 'Adresse', value: 'Georgenstraße 43, 80799 München', href: 'https://www.google.com/maps/search/?api=1&query=Georgenstraße+43,+80799+München' },
             ].map((c) => (
               <a
                 key={c.label}
@@ -923,8 +940,14 @@ function Footer() {
           <div>
             <h4 className="font-inter font-semibold text-white text-sm mb-4 uppercase tracking-widest">Adresse</h4>
             <address className="not-italic font-inter text-sm leading-loose">
+              <span className="text-white/40 text-xs uppercase tracking-wider">Beratung & Coaching</span><br />
+              Georgenstraße 43<br />
+              80799 München<br />
+              <br />
+              <span className="text-white/40 text-xs uppercase tracking-wider">Gruppenberatung</span><br />
               Hiltenspergerstr. 48<br />
               80796 München<br />
+              <br />
               <a href="mailto:c.mayer@camy-coaching.eu" className="hover:text-white transition-colors">c.mayer@camy-coaching.eu</a>
             </address>
           </div>
