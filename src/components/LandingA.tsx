@@ -725,8 +725,8 @@ function Impressionen() {
 
 const pricingItems = [
   { name: 'Psychologische Beratung', duration: '50 Minuten', price: '95 €' },
-  { name: 'Paarberatung', duration: '', price: '110 €' },
-  { name: 'Gruppenberatung', duration: '', price: '30 €' },
+  { name: 'Paarberatung', duration: '60 Minuten', price: '110 €' },
+  { name: 'Gruppenberatung', duration: '90 Minuten · pro Person', price: '30 €' },
   { name: 'Traumayoga', duration: '60 Minuten', price: '60 €' },
   { name: 'Psychologische Beratung mit Traumayoga', duration: '60–90 Minuten', price: '80–100 €' },
   { name: 'EMDR', duration: '60 Minuten', price: '80 €' },
